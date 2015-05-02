@@ -31,6 +31,8 @@ geojson.valid? # => false
 geojson.errors # => [{ schema: {...}, fragment: "...", message: "...", failed_attribute: "...", errors: [...] }]
 ```
 
+Also included is a custom validator for your `ActiveModel` objects.
+
 ```ruby
 class Feature
   include ActiveModel::Model
