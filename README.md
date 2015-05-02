@@ -1,8 +1,10 @@
 # Geojsonlint
 
-Validate a `Hash` or a JSON `String` object.
+A geoJSON validator.
 
 ## Usage
+
+Validate a `Hash` or a JSON `String` object.
 
 ```ruby
 data = {
