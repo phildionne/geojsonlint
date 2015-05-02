@@ -7,7 +7,7 @@ module Geojsonlint
   class Parser
     attr_reader :schema, :data
 
-    # @param data [String, Hash, File]
+    # @param data [String, Hash]
     def initialize(data)
       @data = data
       @schema = JSON.parse(File.read('./lib/geojsonlint/geojson_schema.json'))
@@ -49,8 +49,7 @@ module Geojsonlint
   end
 
   # Validates a geojson object
-  # @param geojson [String, Hash, File] a JSON string, a file containing JSON,
-  # or a Ruby object representing JSON data
+  # @param geojson [String, Hash] a JSON string or a Ruby object representing JSON data
   #
   # @return [Geojson]
   def validate(geojson)

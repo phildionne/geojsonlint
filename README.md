@@ -1,7 +1,50 @@
 # Geojsonlint
 
+Validate a `Hash` or a JSON `String` object.
 
-TODO: Delete this and the text above, and describe your gem
+## Usage
+
+```ruby
+data = {
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: [-80.72, 35.26]
+  },
+  properties: {}
+}
+
+geojson = Geojsonlint.validate(data)
+geojson.valid? # => true
+
+data = {
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: 'invalid'
+  },
+  properties: {}
+}
+
+geojson = Geojsonlint.validate(data)
+geojson.valid? # => false
+geojson.errors # => [{ schema: {...}, fragment: "...", message: "...", failed_attribute: "...", errors: [...] }]
+```
+
+```ruby
+class Feature
+  include ActiveModel::Model
+  include ActiveModel::Validations
+
+  attr_accessor :data
+
+  validates :data, geojson: true
+end
+
+feature = Feature.new(data: data)
+feature.valid?
+feature.errors[:data] # => ["Invalid geojson"]
+```
 
 ## Installation
 
@@ -18,10 +61,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install geojsonlint
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
