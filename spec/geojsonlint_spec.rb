@@ -11,22 +11,54 @@ describe Geojsonlint do
 
     describe :validate do
 
-      context "with valid" do
-
-        describe "json" do
-          let(:json) { JSON.dump({ foo: "bar" }) }
+      context "with data type" do
+        describe "string" do
+          let(:data) { JSON.dump({ type: 'Point', coordinates: [-105.01621, 39.57422] }) }
 
           it "does not raise error" do
             expect {
-              Geojsonlint.validate(json)
+              Geojsonlint.validate(data)
             }.not_to raise_error
           end
 
-          it "populates errors" do
-            geojson = Geojsonlint.validate(json)
-            expect(geojson.errors).not_to be_empty
+          it "does not populate errors" do
+            geojson = Geojsonlint.validate(data)
+            expect(geojson.errors).to be_empty
           end
         end
+
+        describe "symbolized hash" do
+          let(:data) { { type: 'Point', coordinates: [-105.01621, 39.57422] } }
+
+          it "does not raise error" do
+            expect {
+              Geojsonlint.validate(data)
+            }.not_to raise_error
+          end
+
+          it "does not populate errors" do
+            geojson = Geojsonlint.validate(data)
+            expect(geojson.errors).to be_empty
+          end
+        end
+
+        describe "stringified hash" do
+          let(:data) { { 'type' => 'Point', 'coordinates' => [-105.01621, 39.57422] } }
+
+          it "does not raise error" do
+            expect {
+              Geojsonlint.validate(data)
+            }.not_to raise_error
+          end
+
+          it "does not populate errors" do
+            geojson = Geojsonlint.validate(data)
+            expect(geojson.errors).to be_empty
+          end
+        end
+      end
+
+      context "with valid" do
 
         describe "geometry" do
 
@@ -106,21 +138,6 @@ describe Geojsonlint do
       end
 
       context "with invalid" do
-
-        describe "json" do
-          let(:json) { '{foo:"bar"}' }
-
-          it "does not raise error" do
-            expect {
-              Geojsonlint.validate(json)
-            }.not_to raise_error
-          end
-
-          it "populates errors" do
-            geojson = Geojsonlint.validate(json)
-            expect(geojson.errors).not_to be_empty
-          end
-        end
 
         describe "geometry" do
 
