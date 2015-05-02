@@ -2,6 +2,10 @@ require 'geojsonlint/version'
 require 'json'
 require 'json-schema'
 
+if defined?(ActiveModel)
+  require 'geojsonlint/geojson_validator'
+end
+
 module Geojsonlint
 
   class Parser
