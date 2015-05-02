@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'active_model'
 require 'geojsonlint/geojson_validator'
 
 class Feature
