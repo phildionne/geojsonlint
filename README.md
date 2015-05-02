@@ -2,6 +2,11 @@
 
 A geoJSON validator.
 
+[![Gem Version](https://badge.fury.io/rb/geojsonlint.png)](http://badge.fury.io/rb/geojsonlint)
+[![Code Climate](https://codeclimate.com/github/can-explore/geojsonlint/badges/gpa.svg)](https://codeclimate.com/github/can-explore/geojsonlint)
+[![Coverage Status](https://coveralls.io/repos/can-explore/geojsonlint/badge.svg)](https://coveralls.io/r/can-explore/geojsonlint)
+[![Build Status](https://travis-ci.org/can-explore/geojsonlint.png)](https://travis-ci.org/can-explore/geojsonlint)
+
 ## Usage
 
 Validate a `Hash` or a JSON `String` object.
