@@ -76,6 +76,16 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 6. Thank you!
+
+## See Also
+
+* [mapbox/geojsonhint](https://github.com/mapbox/geojsonhint)
+* [geojsonhint online](https://www.mapbox.com/geojsonhint/)
+* [grunt-geojsonhint](https://github.com/jieter/grunt-geojsonhint) does it as a Grunt task
+* [geojsonlint.com](http://geojsonlint.com/) does this server-side
+* [GeoJSON-Validation](https://github.com/craveprogramminginc/GeoJSON-Validation) is another node module for this.
+* [geojson-assert](https://github.com/calvinmetcalf/geojson-assert) does it in assertion tests
+
 ## License
 
 `geojsonlint` is © 2015 Can-Explore and may be freely distributed under the New BSD license. See the `LICENSE.md` file.
