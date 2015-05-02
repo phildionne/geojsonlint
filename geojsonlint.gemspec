@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{A geojson validator.}
   spec.description   = %q{A geojson validator.}
   spec.homepage      = "http://github.com/can-explore/geojsonlint"
-  spec.license       = "MIT"
+  spec.license       = "BSD 3-Clause"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
