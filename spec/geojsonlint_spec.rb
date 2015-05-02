@@ -1,12 +1,13 @@
 require 'spec_helper'
 
 describe Geojsonlint do
+  let(:support_path) { File.expand_path('../support', __FILE__) }
+
   it "has a version number" do
     expect(Geojsonlint::VERSION).not_to be nil
   end
 
   describe :ModuleMethods do
-    let(:support_path) { File.expand_path('../support', __FILE__) }
 
     describe :validate do
 
