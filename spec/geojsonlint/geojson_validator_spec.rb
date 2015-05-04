@@ -3,8 +3,15 @@ require 'active_model'
 require 'geojsonlint/geojson_validator'
 
 class Feature
-  include ActiveModel::Model
   include ActiveModel::Validations
+
+  def initialize(params={})
+    params.each do |attr, value|
+      self.public_send("#{attr}=", value)
+    end if params
+
+    super()
+  end
 
   attr_accessor :geojson
 
