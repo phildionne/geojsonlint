@@ -14,7 +14,8 @@ module Geojsonlint
     # @param data [String, Hash]
     def initialize(data)
       @data = data
-      @schema = JSON.parse(File.read('./lib/geojsonlint/geojson_schema.json'))
+
+      @schema = JSON.parse(File.read(File.expand_path('../geojsonlint/geojson_schema.json', __FILE__)))
       self
     end
 
