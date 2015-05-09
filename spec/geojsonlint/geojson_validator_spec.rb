@@ -51,7 +51,7 @@ describe GeojsonValidator do
         end
 
         it "populates errors :geojson with 'Invalid geojson'" do
-          expect(feature.errors[:geojson]).to eq(['Invalid geojson'])
+          expect(feature.errors[:geojson]).to eq(['is invalid'])
         end
       end
     end

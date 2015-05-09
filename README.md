@@ -52,7 +52,7 @@ end
 
 feature = Feature.new(data: data)
 feature.valid?
-feature.errors[:data] # => ["Invalid geojson"]
+feature.errors[:data] # => ["Geojson is invalid""]
 ```
 
 ## Installation

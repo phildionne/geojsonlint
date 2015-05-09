@@ -4,7 +4,7 @@ class GeojsonValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
     unless valid_geojson?(value)
-      message = options[:message] || "invalid"
+      message = options[:message] || "is invalid"
       record.errors.add(attribute, message)
     end
   end
