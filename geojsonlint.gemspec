@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "json-schema", "~> 2.5.0"
-  spec.add_dependency "activemodel", "~> 3.0.0"
+  spec.add_dependency "activemodel", ">= 3.0.0"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
