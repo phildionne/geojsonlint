@@ -94,13 +94,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 * [geojsonlint.com](http://geojsonlint.com/) does this server-side
 * [GeoJSON-Validation](https://github.com/craveprogramminginc/GeoJSON-Validation) is another node module for this.
 * [geojson-assert](https://github.com/calvinmetcalf/geojson-assert) does it in assertion tests
-
-## License
-
-`geojsonlint` is © 2015 Can-Explore and may be freely distributed under the New BSD license. See the `LICENSE.md` file.
-
-## About Can-Explore
-
-Can-Explore is a team of passionate people brdiging the gap between technology and the world of civil engineering. We love building new things and get out of our comfort zone.
-
-We love [open-source](https://github.com/can-explore) and we try to give back to the community as much as we can.
