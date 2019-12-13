@@ -3,9 +3,9 @@
 A geoJSON validator.
 
 [![Gem Version](https://badge.fury.io/rb/geojsonlint.png)](http://badge.fury.io/rb/geojsonlint)
-[![Code Climate](https://codeclimate.com/github/can-explore/geojsonlint/badges/gpa.svg)](https://codeclimate.com/github/can-explore/geojsonlint)
-[![Coverage Status](https://coveralls.io/repos/can-explore/geojsonlint/badge.svg)](https://coveralls.io/r/can-explore/geojsonlint)
-[![Build Status](https://travis-ci.org/can-explore/geojsonlint.png)](https://travis-ci.org/can-explore/geojsonlint)
+[![Code Climate](https://codeclimate.com/github/phildionne/geojsonlint/badges/gpa.svg)](https://codeclimate.com/github/phildionne/geojsonlint)
+[![Coverage Status](https://coveralls.io/repos/phildionne/geojsonlint/badge.svg)](https://coveralls.io/r/phildionne/geojsonlint)
+[![Build Status](https://travis-ci.org/phildionne/geojsonlint.png)](https://travis-ci.org/phildionne/geojsonlint)
 
 ## Usage
 
@@ -79,7 +79,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/can-explore/geojsonlint/fork )
+1. Fork it ( https://github.com/phildionne/geojsonlint/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
