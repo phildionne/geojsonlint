@@ -1,9 +1,11 @@
-require 'geojsonlint/version'
-require 'json'
-require 'json-schema'
+# frozen_string_literal: true
+
+require "geojsonlint/version"
+require "json"
+require "json-schema"
 
 if defined?(ActiveModel)
-  require 'geojsonlint/geojson_validator'
+  require "geojsonlint/geojson_validator"
 end
 
 module Geojsonlint
@@ -15,7 +17,7 @@ module Geojsonlint
     def initialize(data)
       @data = data
 
-      @schema = JSON.parse(File.read(File.expand_path('../geojsonlint/geojson_schema.json', __FILE__)))
+      @schema = JSON.parse(File.read(File.expand_path("../geojsonlint/geojson_schema.json", __FILE__)))
       self
     end
 

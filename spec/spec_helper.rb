@@ -1,8 +1,10 @@
-require 'coveralls'
+# frozen_string_literal: true
+
+require "coveralls"
 Coveralls.wear!
 
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'geojsonlint'
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+require "geojsonlint"
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].map(&method(:require))
 

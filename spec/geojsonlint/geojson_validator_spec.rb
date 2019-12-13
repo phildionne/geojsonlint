@@ -1,6 +1,8 @@
-require 'spec_helper'
-require 'active_model'
-require 'geojsonlint/geojson_validator'
+# frozen_string_literal: true
+
+require "spec_helper"
+require "active_model"
+require "geojsonlint/geojson_validator"
 
 class Feature
   include ActiveModel::Validations
@@ -19,7 +21,7 @@ class Feature
 end
 
 describe GeojsonValidator do
-  let(:support_path) { File.expand_path('../../support', __FILE__) }
+  let(:support_path) { File.expand_path("../../support", __FILE__) }
 
   describe :IntanceMethods do
 
@@ -28,7 +30,7 @@ describe GeojsonValidator do
       before { feature.valid? }
 
       context "with valid geojson" do
-        let(:geojson) { JSON.parse(File.read(File.join(support_path, 'point.json'))) }
+        let(:geojson) { JSON.parse(File.read(File.join(support_path, "point.json"))) }
 
         it "is valid" do
           expect(feature).to be_valid
@@ -40,7 +42,7 @@ describe GeojsonValidator do
       end
 
       context "with invalid geojson" do
-        let(:geojson) { JSON.parse(File.read(File.join(support_path, 'invalid_point.json'))) }
+        let(:geojson) { JSON.parse(File.read(File.join(support_path, "invalid_point.json"))) }
 
         it "is invalid" do
           expect(feature).to be_invalid
@@ -51,11 +53,9 @@ describe GeojsonValidator do
         end
 
         it "populates errors :geojson with 'Invalid geojson'" do
-          expect(feature.errors[:geojson]).to eq(['is invalid'])
+          expect(feature.errors[:geojson]).to eq(["is invalid"])
         end
       end
     end
   end
 end
-
-
