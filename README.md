@@ -2,10 +2,9 @@
 
 A geoJSON validator.
 
-[![Gem Version](https://badge.fury.io/rb/geojsonlint.png)](http://badge.fury.io/rb/geojsonlint)
-[![Code Climate](https://codeclimate.com/github/phildionne/geojsonlint/badges/gpa.svg)](https://codeclimate.com/github/phildionne/geojsonlint)
-[![Coverage Status](https://coveralls.io/repos/phildionne/geojsonlint/badge.svg)](https://coveralls.io/r/phildionne/geojsonlint)
-[![Build Status](https://travis-ci.org/phildionne/geojsonlint.png)](https://travis-ci.org/phildionne/geojsonlint)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1d1c9a8154c213675843/maintainability)](https://codeclimate.com/github/phildionne/geojsonlint/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1d1c9a8154c213675843/test_coverage)](https://codeclimate.com/github/phildionne/geojsonlint/test_coverage)
+[![Build Status](https://travis-ci.org/phildionne/geojsonlint.svg?branch=master)](https://travis-ci.org/phildionne/geojsonlint)
 
 ## Usage
 
